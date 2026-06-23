@@ -1,7 +1,5 @@
 <?php
 
-var_dump($_POST);
-
 $conexao = new mysqli(
     "localhost",
     "root",
@@ -27,7 +25,8 @@ if ($usuario === null) {
     echo "Usuario ou Senha incorreta";
 } else {
     if ($senha == $usuario["senha"]) {
-        echo "login realizado";
+        header("Location: dashboard.html");
+        exit;
     } else {
         echo "Usuario ou Senha incorreta";
     }
