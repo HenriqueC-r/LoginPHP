@@ -10,20 +10,6 @@
 
 <div class="dashboard">
 
-<aside class="sidebar">
-
-    <h2>Dashboard</h2>
-
-    <a href="usuarios.html" class="menu-item">
-        👥 Usuários
-    </a>
-
-    <a href="index.html" class="menu-item">
-        🚪 Sair
-    </a>
-
-</aside>
-
     <main class="conteudo">
 
 
@@ -32,31 +18,39 @@
             <h3>Usuários cadastrados</h3>
 
             <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                    </tr>
-                </thead>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Senha</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
 
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mirian</td>
-                    </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mirian</td>
+                    <td>123456</td>
+                    <td><button>Excluir</button></td>
+                </tr>
 
-                    <tr>
-                        <td>2</td>
-                        <td>Caio</td>
-                    </tr>
-                </tbody>
-            </table>
+                <tr>
+                    <td>2</td>
+                    <td>Caio</td>
+                    <td>abcdef</td>
+                    <td><button>Excluir</button></td>
+                </tr>
+            </tbody>
+        </table>
 
         </div>
 
     </main>
 
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

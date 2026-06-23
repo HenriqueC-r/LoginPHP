@@ -54,69 +54,16 @@
     opacity: 0.9;
 }
 
-/* DASHBOARD */
-
-#dashboard-page{
-    background: #eef2ff;
-    font-family: Arial, sans-serif;
-}
-
-.dashboard{
-    display: flex;
-    min-height: 100vh;
-}
-
-/* SIDEBAR */
-
-.sidebar{
-    width: 350px;
-
-    background: linear-gradient(
-        180deg,
-        #2563eb,
-        #1d4ed8
-    );
-
-    color: white;
-
-    padding: 40px 30px;
-}
-
-.sidebar h2{
-    text-align: center;
-    font-size: 42px;
-    font-weight: bold;
-    margin-bottom: 50px;
-}
-
-.sidebar a{
-    display: block;
-
-    color: white;
-    text-decoration: none;
-
-    padding: 15px;
-
-    margin-bottom: 15px;
-
-    border-radius: 10px;
-
-    transition: 0.3s;
-}
-
-.sidebar a:hover{
-    background: rgba(255,255,255,0.2);
-}
-
 /* CONTEÚDO */
 
 .conteudo{
     flex: 1;
 
-    padding: 50px;
-
     display: flex;
-    flex-direction: column;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+
+    padding: 40px;
 }
 
 .conteudo h1{
@@ -128,18 +75,18 @@
 /* TABELA */
 
 .tabela-box{
+    width: 90%;
+    max-width: 1000px;
+
+    min-height: 600px;
+
     background: white;
 
     border: 3px solid #2563eb;
 
-    width: 100%;
-    max-width: 1100px;
-
-    min-height: 650px;
+    border-radius: 20px;
 
     padding: 30px;
-
-    border-radius: 20px;
 
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
@@ -207,4 +154,39 @@ tr:hover{
     background: rgba(255,255,255,0.25);
 
     transform: translateX(5px);
+}
+
+#cadastro-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+#cadastro-page form{
+    background: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+#cadastro-page input{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#cadastro-page button{
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
 }
