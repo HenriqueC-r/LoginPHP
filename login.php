@@ -1,5 +1,7 @@
 <?php
 
+var_dump($_POST);
+
 $conexao = new mysqli(
     "localhost",
     "root",
@@ -12,8 +14,8 @@ if ($conexao->connect_error) {
 }
 
 
-$nome = "caio";
-$senha = "12345678";
+$nome = $_POST["nome"];
+$senha = $_POST["senha"];
 
 $sql = "SELECT * FROM usuarios WHERE nome = '$nome'";
 
