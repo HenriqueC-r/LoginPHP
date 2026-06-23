@@ -20,3 +20,5 @@ $sql = "INSERT INTO usuarios (nome, senha)
 $conexao->query($sql);
 
 echo "Usuário cadastrado com sucesso";
+
+?>
