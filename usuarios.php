@@ -5,7 +5,7 @@ $conexao = new mysqli(
     "root",
     "Wasd1313@",
     "loginphp"
-);    
+);
 
 if ($conexao->connect_error) {
     die("Erro na conexão");
@@ -14,18 +14,15 @@ if ($conexao->connect_error) {
 $sql = "SELECT * FROM usuarios";
 $resultado = $conexao->query($sql);
 
-if ($resultado->num_rows == 0) {
-    echo "Nenhum Usuario cadastrado.";
-}
+$usuarios = [];
 
 while ($usuario = $resultado->fetch_assoc()) {
-    echo $usuario["id"] . " - ";
-    echo $usuario["nome"] . "<br>";
+    $usuarios[] = $usuario;
+}
 
-    echo "<a href='excluir.php?id=" . $usuario["id"] . "'>Excluir</a>";
+header("Content-Type: application/json");
 
-    echo "<br>";
-}  
+echo json_encode($usuarios);
 
 $conexao->close();
 
