@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <form action="cadastro.php" method="POST">
 
-    <form action="login.php" method="POST">
-
-        <h2>Login</h2>
+        <h2>Cadastrar</h2>
 
         <input
             type="text"
@@ -23,18 +22,15 @@
            id="senha"
            name="senha"
            placeholder="Digite sua senha">
-            
-        
 
         <button type="submit" id="entrar"> 
-            entrar
+            Criar Conta
         </button>
 
-        <p>Não tem conta?
-          <a href="cadastro.html">Cadastre-se</a>
-       </p>
+        <p>Já tem uma conta?
+           <a href="index.html">Login</a>
+        </p>
 
-    </form>
-    
+</form>
 </body>
 </html>
