@@ -10,7 +10,7 @@ fetch("usuarios.php")
 
     const tabela = document.getElementById("tabela-usuarios");
 
-    if (!tabela) return; // evita erro nas páginas que não têm tabela
+    if (!tabela) return;
 
     tabela.innerHTML = "";
 
@@ -20,9 +20,23 @@ fetch("usuarios.php")
                 <td>${usuario.id}</td>
                 <td>${usuario.nome}</td>
                 <td>${usuario.senha}</td>
-                <td><button>Excluir</button></td>
+                <td>
+                    <button onclick="excluir(${usuario.id})">
+                        Excluir
+                    </button>
+                </td>
             </tr>
         `;
     });
 
 });
+
+function excluir(id){
+
+    if(confirm("Deseja excluir este usuário?")){
+
+        window.location.href = `excluir.php?id=${id}`;
+
+    }
+
+}
