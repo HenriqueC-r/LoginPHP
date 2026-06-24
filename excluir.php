@@ -13,10 +13,11 @@ if ($conexao->connect_error) {
 
 $id = $_GET["id"];
 
-$sql = "DELETE * FROM usuarios WHERE id = $id";
+$sql = "DELETE FROM usuarios WHERE id = $id";
 
 $conexao->query($sql);
 
-echo "Usuario excluido com sucesso";
+header("Location: dashboard.html");
+exit;
 
 ?>
