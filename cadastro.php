@@ -19,7 +19,7 @@ $sql = "INSERT INTO usuarios (nome, senha)
 
 $conexao->query($sql);
 
-header("Location: dashboard.html");
+header("Location: index.html");
 exit;
 
 ?>
